@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fontes em CSS</title>
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif; 
+            /*
+            Medidas Absolutas:
+            cm, mm, in, px, pt, pc
+
+            Medidas Relativas:
+            em, ex, rem, vw, vh, %
+
+            A recomendação oficial é usar medidas em.
+
+            Font-size: 16px, tamanho padrão do navegador
+            16px = 1em
+
+            Caso font-size fosse definido como 20px, então 1em seria 20px
+        
+
+            O rem é referente a fonte definida, neste caso, dentro do body. 
+            
+            */
+            font-size: 1em;
+        }
+
+        h1
+        {
+            /*O Navegador usa a fonte que estiver disponivel primeiro, na ordem da linha*/
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal; /*lighter, normal, bold, bolder (algumas fontes)*/
+            font-size: 3em;
+            font-style: italic; /* italic ou normal*/
+            text-decoration: underline; 
+            /*Nem todas as fontes tem todas variações*/
+
+            /*shorthand font
+            Agrupando os quatro atributos de fonte em um único atributo, seguindo a ordem de declaração:
+
+            font: font-style font-weight font-size font-family
+
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>Tamanho de fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odit, distinctio deserunt iusto minima porro temporibus maiores eaque? Sunt, ab quis. Sint accusantium praesentium quae quis, at eum id perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio dolorum expedita adipisci sunt exercitationem blanditiis, doloribus nostrum, voluptatibus delectus, fugit saepe atque? Nulla inventore voluptatum ea et sunt maiores dolorum.</p>
+    <h2>Tamanho de Subtítulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur in placeat ratione eveniet quis? Accusantium earum non amet quo adipisci velit, aut natus sequi nostrum! Ea temporibus quam pariatur minima.</p>
+</body>
+</html>

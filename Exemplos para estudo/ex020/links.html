@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links e Pseudo-elementos</title>
+    <style>
+        /*
+            PSEUDO-ELEMENTOS
+
+            Permite estilizar partes específicas de um elemento sem precisar 
+            alterar o código no HTML.
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;  
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: gold;
+        }
+
+        a::after {
+            content: ' [link]';
+            font-weight: normal;
+            color: lightgrey;
+        }
+
+        .especial::first-letter {
+            font-weight: bold;
+            font-size: 2em;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="especial">Personalizando Links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositório Github</a></li>
+        <li><a href="https://youtube.com/cursoemvideo" target="_blank">Canal do Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank">Site do CursoemVídeo</a></li>
+    </ul>
+</body>
+</html>

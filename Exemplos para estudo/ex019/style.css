@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/*
+    IDENTIFICADOR (id) E SELETOR (#)
+
+    No código HTML:
+    A id é um atributo identificador único para uma única tag,
+    usado uma única vez por página, portanto, não deve ser 
+    adicionada a outras elementos. Este atributo adiciona 
+    propriedades de CSS a esta tag. 
+
+    <tag id="label"></tag>
+
+    A sintaxe do atributo
+    <tag atributo1="valor" atributo2="valor">Texto</tag>
+    
+    Cada adição de atributo na tag é separada por um espaço
+
+    No código CSS:
+    O # é um seletor de id, para estilizar uma tag com esse
+    atributo cujo valor é seu nome (label = etiqueta de identificação)
+    #label {propriedade} 
+    
+    A sintaxe da declaração das propriedades 
+    #label{propriedades1; propriedade2;}
+
+    Cada declaração é separada por ;
+*/
+/*
+    CLASSES (.)
+    
+    Para aplicar propriedades de CSS a mais de uma tag de HTML
+    adicionamos o atribulo class nas tags, e o seletor '.' para 
+    definir as propriedades em CSS.
+
+    No código HTML:
+    <tag class="label1 label2">Texto</tag>
+
+    No código CSS:
+    .label1{propriedades1; propriedade2;}
+    .label2{propriedade3; propriedade4;}
+
+    É possivel adicionar a tag mais de uma class, ou
+    class com id, se forem redundantes, o class sobrepõe a id.
+*/
+
+body
+{
+    background-color: rgb(199, 199, 199);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#principal  
+{
+    /*
+        Não é necessário enunciar o tipo da tag antes do seletor (h1#principal)
+        pois essas propriedades podem ser aplicadas a outras tags.
+    */
+    text-align: center;
+    font-size: 3em;
+    background-color: lightblue;
+}
+
+
+h1
+{
+    color:darkgreen;
+    background-color:lightgrey;
+}
+
+h2
+{
+    color:darkslateblue;
+}
+
+.basico
+{
+    color: lightgreen;
+}
+
+.intermediario
+{
+    color: lightyellow;
+}
+
+.avancado
+{
+    color: rgb(211, 55, 55);
+}
+
+.destaque 
+{   
+    background-color: rgba(255, 255, 0, 0.432);
+
+}
+
+#sublinhar
+{
+    text-decoration: underline;
+}

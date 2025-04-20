@@ -1,0 +1,24 @@
+Passo a passo de construção do site:
+
+1. Esboço de mapeamento do site (monkflow);
+2. Iniciar a base de código HTML (VS code);
+3. Estruturar o mapeamento em HTML;
+4. Importar texto de conteúdo do site, de acordo com a semântica das tags;
+5. Configurar as marcações conforme mapeamento e conteúdo; 
+6. Linkar a folha de estilo CSS;
+7. Configurar regras de estilo e os seletores CSS para cada elemento HTML:
+	- Variáveis com a paleta de cores;
+	- Variáveis com as fontes;
+	- Importar as fontes;
+8. Configurar a responsividade do conteúdo da página em cada elemento:
+	- Texto;
+	- Imagens;
+	- Distribuição e enquadramento da folha de fundo;
+9. Configurar as propriedades nos seletores correspondentes :
+	- Margens;
+	- Bordas;
+	- Sobreamentos;
+
+	
+
+

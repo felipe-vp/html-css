@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/*
+    É uma instrução que deve ser declarada na primeira linha do arquivo,
+    é uma regra (at-rule) para definir a codificação do conjunto de
+    caracteres do documento CSS para ser compilado pelo navegador, decifrando 
+    corretamente cada caracter.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*
+    É uma instrução para importar (carregar) outros arquivos CSS, nesse caso,
+    para importar um arquivo CSS de uma fonte específica.  
+*/
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format(opentype);
+    font-weight: normal;
+    /*
+        Instrução para carregar arquivo de fonte personalizada, previamente
+        baixado de um site de fontes. 
+    */
+}
+
+/*
+    Paleta de cores:
+    #c5ebd6
+    #83e1ad
+    #3ddc84
+    #2fa866
+    #1a5c37    
+    #063d1e
+*/
+    
+:root { /* Seletor de pseudo-classe */
+
+    /* Variáveis da Paleta de cores */
+    --cor0:#c5ebd6; /* Custom Properties */
+    --cor1:#83e1ad; /* Propriedades customizadas*/
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;    
+    --cor5:#063d1e;
+
+    /* Variáveis de fontes */
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: 'Android', sans-serif;
+
+    /*
+        O seletor :root{} em CSS equivale ao elemento <html>, é analogo de html{},
+        seleciona apenas o elemento raiz do documento HTML: <html>.
+        Mas em comparação direta, a pseudo-classe root tem maior prioridade, 
+        prevalece sobre as propriedades de html{}.
+        As variáveis CSS (custom properties) são propriedades personalizadas.
+        Por convenção, as variáveis  são configuradas em root devido ao seu escopo global.
+
+        Sintaxe de variáveis CSS:
+        --minhaVariavel: valor;
+
+        Sintaxe de aplicação:
+        :root { --minhaVariavel: valor; }
+        div { propriedade: var(--minhaVariavel); }
+    */
+}
+
+* { /* Seletor Universal*/
+    margin: 0px;
+    padding: 0px;
+    /*
+        *{} é um Seletor Universal, seleciona todos elementos do documento,
+        inclusive elementos e pseudo-elementos não selecionados em CSS.
+        É usado geralmente para aplicar estilos básicos globais. Cada navegador
+        tem estilos básicos (padrões) diferentes para elementos HTML, sem nenhum 
+        estilo CSS aplicado, exceto os embutidos pelo navegador. 
+        Por exemplo, no Google Chrome:
+
+        <h1> a <h6>: fonte maior, negrito, margens, paddings, tipo bloco etc.
+        <a>: cor azul, sublinhado, tipo inlineetc.
+
+        O estilo padrão dos elementos varia de navegador para navegador, por isso 
+        é muito comum resetá-los no começo de um projeto para evitar comportamentos 
+        inesperados dos elementos . 
+        O seletor * não tem muita especificidade (prioridade) e pode impactar 
+        a performance se usado com muitas propriedades pesadas, por isso é
+        convencionalmente usado apenas para redefinir os estilos básicos para obter
+        uma base padrão para o projeto de modo que a pagina tenha um funcionamento
+        uniforme em todos os navegadores.
+    */
+}
+
+body { /* Seletor de elemento HTML*/
+    background-color: #c5ebd6;
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after {
+    content: '00A0\1F517'; 
+    /*
+        O código a.externo::after {} em CSS se refere ao uso do pseudo-elemento ::after aplicado a qualquer elemento <a> (link) com a classe externo.
+   */
+}
+
+header { 
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    min-width: 300px;
+    padding-top: 40px;
+}
+
+header > h1 { /* Seletor de descendente direto */
+    /*
+        elemento1 > elemento2 { propriedades } 
+
+        Seletor de filho direto, significa que todo elementos2 que é 
+        filho direto de elemento1 (envelopado em elemento1) recebe a(s) 
+        propriedade(s) (estilo(s)).   
+    */
+    color: var(--cor1);
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    font-size: 3.5em;
+    font-weight: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.32);
+
+}
+
+header > p {
+    color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 450px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.388);
+}
+
+nav {
+    background-color: var(--cor5);
+    min-width: 300px;
+    padding: 10px;
+    box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.436);
+    font-weight: bold;
+}
+
+nav > a {
+    color: var(--cor0);
+    padding: 10px;
+    text-decoration: none; /* desativa underline das tags <a> contidas em <nav> */
+    
+}
+
+nav > a:hover {
+    /* 
+        Seletor dos elementos <a> (links) que tem a pseudo-classe 'hover' e que são 
+        descendentes diretos de <nav> (menu); ativa as propriedades no elemento quando 
+        este atingir a 'condição' ou o 'estado' temporario inerente a pseudo-classe definida.
+
+        Ou seja, quando o ponteiro do mouse está pairando sobre os links do menu, 
+        o elemento recebe as propriedades.
+    */
+    background-color: var(--cor5);
+    color: var(--cor3);
+    transition: 0.6s; /* Transição entre os dois estados do elemento*/
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+}
+
+main {
+    min-width: 260px; /* Margem mínima de ajuste automático do conteúdo na tela */
+    max-width: 1000px; /* Margem máxima de ajuste automático do conteúdo na tela*/
+    padding: 20px; /* Distancia entre a borda do elemento main e a area de texto*/
+    margin: auto; /* Centraliza automaticamente o elemento main */
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.475); 
+    background-color: rgba(255, 255, 255, 0.628);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+main h1 {
+     /*  
+        Aplica as propriedades a todos elementos <h1> que estão dentro de <main>. 
+
+        elemento1  elemento2 { propriedades } 
+
+        Seletor de descendente, significa que todo elementos2 recebe a(s) 
+        propriedade(s) (estilo(s)), independente do grau de descendência, 
+        direto ou indireto (dentro de outro elemento que esteja dentro do 
+        elemento1).
+    */
+    color: var(--cor4);
+    font-family: var(--fonte-android);
+    text-indent: 10px;
+    font-size: 2em;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.253); 
+}
+
+main h1::before { 
+     /*
+        O pseudo-elemento before (neste caso, imagem.png de icone de Android, definido 
+        pelas propriedades) é concatenado após aos elementos <h1> que estão contidos em <main>.
+        Método para colocar um icone junto de um elemento html (neste caso um icone de Android) 
+        através de um pseudo elemento, que carrega a imagem baixada do icone em formato png. A vantagem 
+        desse método é poder usar qualquer imagem de icone, inclusive customizados, mas requer 
+        várias propriedades e ajustes. O sobreamento através de text-shadow não pode ser aplicado 
+        ao icone, somente através de filter para obter o efeito de sombra. 
+    */ 
+    content: ""; /* Necessário para o pseudo-elemento funcionar */
+    display: inline-block; /* Transforma o pseudo-elemento em um bloco */
+    width: 28px;
+    height: 28px;
+    background-image: url(../imagens/Android-icon-64.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    filter: drop-shadow(2px 2px 0.7px rgba(0, 0, 0, 0.596)) /* Somente a sombra da imagem projeta a sombra*/
+}
+
+main h2 {
+    color: var(--cor4);
+    font-family: var(--fonte-android);
+    text-indent: 10px;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.253); 
+}
+
+main p { 
+    margin: 15px 0px;
+    text-align: justify; /* Ajusta o espaçamento entre as palavras para alinhas as bordas laterais*/
+    text-indent: 30px; /* Recuo no inicio da primeira linha do paragrafo */
+    line-height: 1.6em;
+    font-size: 1.2em;
+}
+
+main strong { 
+    /*
+        Aplica a cor nos textos contidos nos elementos <strong> que estão dentro de <main>. 
+    */
+    color: #1a5c37;
+}
+
+main a {
+    color: var(--cor4);
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.34);
+}
+
+main a::after { 
+   
+    content: ""; /* Necessário para o pseudo-elemento funcionar */
+    display: inline-block; /* Transforma o pseudo-elemento em um bloco */
+    width: 18px;
+    height: 18px;
+    background-image: url(../imagens/icon-link.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.502)) 
+}
+
+main a:hover {
+    color: var(--cor4);
+    transition: 0.4s; /* Transição entre os dois estados do elemento*/
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.55);
+}
+
+main img {
+    width: 100%; /* img vai ocupar 100% da largura de main*/
+}
+
+main img.pequeno {
+    max-width: 350px; /* Impede que a imagem fique muito grande, perdendo resolução em telas grandes*/
+    display: block;
+    margin: auto;
+    /*
+        Por padrão, o elemento img é do tipo inline, ou seja, não 
+        tem largura e altura, portanto, width não pode ser aplicada.
+        Para img ocupar 50% do elemento pai (main), é preciso 
+        converte-lo em bloco (display: block;). 
+    */
+}
+
+div.video { /* Responsividade: Aspect Ratio Hack */
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px; /* -20px na esq. e dir. para div sobrepor as margems do article e main. */
+    padding: 20px; /* Preenchimento entre a margem e o conteudo de div*/
+    padding-bottom: 56.25%; /* Significa que o preenchimento de baixo é 56.25% da medida da largura */
+    position: relative; /* Define que div é a referencia para seus elementos filho */
+
+   /*
+        margin: 
+        O elemento div da classe video ocupa a largura do elemento que o contem (main), 1000px, mas main 
+        tem um preenchimento de 20px nas laterais (totalizando 1000px da largura do conteúdo e mais 20px de 
+        preenchimento de cada lado, formando uma area visual de 1040px de largura a ser coberta por div). 
+        Quando div tem margem = 0, sua borda sobrepõe a borda do main, quando a margem é positiva a borda 
+        é deslocada para dentro, quando a margem é negativa a borda é deslocada pra fora, por isso as 
+        margens laterais tem valor negativo de -20px em cada lado, para que div seja "esticado" 20px para 
+        fora da largura de 1000px, cobrindo o padding do main. 
+        
+        padding:
+        Foi definido o padding de 20px de valor fixo para o preenchimento do topo e das laterais para criar 
+        um preenchimento entre o espaço externo e o quadrante do video, pra funcionar como uma moldura. 
+
+        padding-bottom:
+        Definido em percentual, significa que a altura do elemento é um percentual (proporção) cuja a referencia é 
+        a largura do elemento que o contém. Nesse caso, o padding-bottom do div.video será 56.25% da largura 
+        do main (conteiner). 
+
+        Position: relative; 
+        Define que os limites de div (borda) são a referencia de posicionamento para os elementos contidos nele.
+        As bordas internas do pai (div.video) delimita qualquer deslocamento do elemento filho (iframe). O
+        video deve se posicionar dentro da borda do conteiner (div). 
+        */
+
+}
+
+div.video > iframe { /* Definição o quadrante do vídeo*/
+    position: absolute; /* Define que div (conteiner) é a referência para posicionamento do video. */
+    top: 5%; /* A borda superior (topo) do video começa 5% (da altura de div) à baixo da borda superior de div. */
+    left: 5%; /* A borda lateral esquerda do video começa 5% (da largura de div) à esquerda da borda lateral de div*/
+    width: 90%; /* A largura do video é 90% da largura do conteiner (div) */
+    height: 90%;/* A altura do video é 90% da altura do conteiner (div)*/
+
+    /*
+        position: absolute; 
+        O elemento filho toma como referência o elemento pai que tenha a propriedade position:relative. 
+        Se o elemento pai (div) não tivesse position:relative, o elemento filho (video) teria como 
+        referencia a viewport do navegador podendo se posicionar fora do conteiner, ou seja, em qualquer 
+        lugar da página.
+
+        top e left
+        Posiciona a borda superior do elemento (top) a 5% da altura do bloco contenedor, medido a partir da 
+        borda superior desse contenedor. O mesmo mecanismo é replicado em left, posiciona a borda esquerda 
+        do elemento a 5% da largura do bloco contenedor, medido a partir da borda esquerda desse contenedor.
+        Essas propriedades definem a POSIÇÃO das extremidades superior e esquerda do VIDEO dentro do div (conteiner).
+        Essas distancias funcionam como uma "moldura" para o elemento dentro do conteiner.
+        Conforme varia a altura e largura do conteiner, a "moldura" é dinamicamente ajustada para
+        manter a proporção.
+
+        width e height
+        Definem proporcionalmente as DIMENSÕES do video tomando como referência as dimensões do seu conteiner. 
+        Width define a largura do elemento como 90% da largura do seu bloco contenedor, height define a altura 
+        do elemento como 90% da altura do seu bloco contenedor.
+
+        A dinâmica da responsividade do conteiner ocorre enquando a largura do div varia, ajustando proporcionalmente
+        sua altura, logo, a altura sempre será 56.25% da medida da largura mantendo a proporção (9/16 = 0.5625). 
+        Assim sendo, as dimensões do video tem como referência as medidas do seu conteiner, portanto, independente 
+        da variação da largura, também será mantinda a proporção 9/16 no video.
+    */
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.411);
+}
+
+aside ul {
+    list-style-type: '\2714\00A0\00A0'; /* Código obtido de sites de emojis */
+    list-style-position: inside; 
+    columns: 2;
+}
+
+aside h3 {
+    background-color: var(--cor4);
+    font-size: 1.2em;
+    color: var(--cor0);
+    margin: -10px -10px 0 -10px;
+    padding: 10px;
+    border-radius: 10px 10px 0 0px;
+}
+
+footer {
+    background-color: var(--cor4);
+    color:white;
+    text-align: center;
+    padding: 7px;
+    font-size: 0.9em;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.511);
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor0);
+}
+
+footer a::after {
+    content: '\1f517\00A0'; /* Código obtido do site emojipedia*/
+    /*
+        Método alternativo para estilizar um elemento html (neste caso um link <a>)
+        colocando um icone junto do elemento através de um pseudo-elemento cujo 
+        código pode ser obtido em site de emoji (emojipedia.org). A vantagem 
+        é que este é um método simples, mas com opções limitadas e genéricas.
+        Para fazer sobreamento, a propriedade text-shadow é aplicada a ambos, 
+        elemento e pseudo-elemento. 
+    */    
+}
+
+footer a:hover {
+    color: var(--cor1);
+    transition: 0.3s; /* Transição entre os dois estados do elemento*/
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.642);
+}
