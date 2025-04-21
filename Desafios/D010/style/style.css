@@ -76,7 +76,7 @@
         Por exemplo, no Google Chrome:
 
         <h1> a <h6>: fonte maior, negrito, margens, paddings, tipo bloco etc.
-        <a>: cor azul, sublinhado, tipo inlineetc.
+        <a>: cor azul, sublinhado, tipo inline etc.
 
         O estilo padrão dos elementos varia de navegador para navegador, por isso 
         é muito comum resetá-los no começo de um projeto para evitar comportamentos 
