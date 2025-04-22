@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsividade do fundo</title>
+    <title>Imagem de fundo</title>
     <style>
         body{
             background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
-            background-repeat: no-repeat; /* A imagem não se repete no fundo*/
+            background-repeat: repeat; /* A imagem não se repete no fundo*/
             background-position: center center; /* Ponto de ancoragem da imagem de fundo*/
             background-size: cover; /* A imagem cobrirá a viewport */
+            background-attachment: fixed; /* Imagem de fundo fixa */
+        
             /*
                 background-size: cover;  A imagem cobrirá o máximo possível da viewport, caso a imagem seja menor que a viewport o navegador cobrirá o espaço restante com a color
                 do background-color. 
             */
 
+            /* Background Shorthand
+                
+                background: color image position  repeat  size  attachment;
+                background: black  center center  repeat  cover  fixed; 
+
+                É necessário declarar background-size separado da shorthand para 
+                funcionar corretamente.
+            */
         }
 
         main{
@@ -35,15 +45,21 @@
                 Diferentemente da largura, onde há um espaço horizontal disponível que pode ser distribuído automaticamente, o espaço vertical entre elementos de bloco é mais "fixo" e determinado pelo fluxo do documento e pelas alturas dos elementos adjacentes.Verticalmente, não há um "espaço restante" claro para o navegador distribuir automaticamente como margens iguais acima e abaixo para centralizar o elemento dentro da altura do pai (body). 
             */
         }
+
+        h1{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <main>
-        <h1>Responsividade da imagem de fundo</h1>
+        <h1>Ajuste da imagem de fundo</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores rem odit quae ipsum eveniet reprehenderit cupiditate, ab modi, recusandae sapiente qui vero perferendis eos totam non! Impedit ex harum reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat laborum ea similique obcaecati iste eveniet et, ratione assumenda commodi quia necessitatibus aspernatur, voluptate dolorum. Sapiente expedita laboriosam mollitia praesentium id.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempora soluta, veritatis quam, alias eos voluptate consequatur eius ducimus amet consectetur beatae debitis aperiam, velit molestiae. Ea, dolor. Consequuntur, tenetur!
-        </p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat magni quasi ea, dolor commodi, dicta aperiam error ducimus, suscipit quibusdam harum at quod alias non odio eaque et velit autem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, hic suscipit. Nisi, doloribus? Quas tempore nobis voluptates esse. Architecto perspiciatis nihil rem unde accusamus cumque, ea optio aperiam laudantium velit?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe corrupti mollitia est quibusdam laboriosam rerum aliquid beatae, voluptatum obcaecati earum quam dolor sed nisi molestiae vitae modi. Voluptatum, non Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum deserunt aut culpa voluptatem cum sequi in eveniet magnam facere, assumenda laudantium quaerat iure sapiente, nam perspiciatis repellendus dolor iste consectetur?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit voluptatum numquam, magni suscipit impedit provident, vitae accusamus beatae inventore dicta maiores doloremque iure minus dolore saepe? Adipisci iste consequuntur Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste quas dolores, earum nostrum cupiditate est vel voluptatibus error hic quia in quidem totam voluptates id nulla harum et atque modi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad odit officiis minima at officia totam unde neque repellendus sequi cupiditate dignissimos vero, nam quidem saepe a autem aspernatur quae.
     </main>
     
 </body>
