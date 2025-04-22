@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade do fundo</title>
+    <style>
+        body{
+            background-color: black;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-repeat: no-repeat; /* A imagem não se repete no fundo*/
+            background-position: center center; /* Ponto de ancoragem da imagem de fundo*/
+            background-size: cover; /* A imagem cobrirá a viewport */
+            /*
+                background-size: cover;  A imagem cobrirá o máximo possível da viewport, caso a imagem seja menor que a viewport o navegador cobrirá o espaço restante com a color
+                do background-color. 
+            */
+
+        }
+
+        main{
+            width: 400px;
+            background-color: white;
+            text-align: justify;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid black;
+            margin: auto;
+            
+            /*
+                Body é um elemento do tipo bloco, cuja sua largura é igual a largura da viewport,
+                e sua altura é a altura do seu conteúdo, portanto, se não há nenhum elemento 
+                dentro do body, ele não tem altura. Main também é um elemento do tipo bloco, por padrão, um elemento de bloco com largura definida menor que o elemento pai (body) não se centraliza dentro do seu elemento conteiner (pai), se você não aplicar estilos de centralização, ele permanecerá alinhado à esquerda. Quando se aplica margin: auto 
+                ao main, o navegador a distribuir o espaço horizontal restante igualmente entre essas margens, resultando na centralização, enquando na base e no topo de main a margem é zero.
+                Diferentemente da largura, onde há um espaço horizontal disponível que pode ser distribuído automaticamente, o espaço vertical entre elementos de bloco é mais "fixo" e determinado pelo fluxo do documento e pelas alturas dos elementos adjacentes.Verticalmente, não há um "espaço restante" claro para o navegador distribuir automaticamente como margens iguais acima e abaixo para centralizar o elemento dentro da altura do pai (body). 
+            */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Responsividade da imagem de fundo</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores rem odit quae ipsum eveniet reprehenderit cupiditate, ab modi, recusandae sapiente qui vero perferendis eos totam non! Impedit ex harum reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat laborum ea similique obcaecati iste eveniet et, ratione assumenda commodi quia necessitatibus aspernatur, voluptate dolorum. Sapiente expedita laboriosam mollitia praesentium id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempora soluta, veritatis quam, alias eos voluptate consequatur eius ducimus amet consectetur beatae debitis aperiam, velit molestiae. Ea, dolor. Consequuntur, tenetur!
+        </p>
+    </main>
+    
+</body>
+</html>
