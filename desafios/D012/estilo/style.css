@@ -1,16 +1,26 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
+}
+
+:root {
+    --fonte1: "Jersey 10", sans-serif;
+    --fonte2: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 html, body {
+    font-family: var(--fonte1);
     min-height: 100vh; 
     background-color: darkgray;
     /* 
         A altura minima dos elementos html e body é igual a 100% a altura da viewport, 
-        portanto, o background-color vai se adaptar a viewport independente do seu conteúdo. 
+        portanto, o background-color sempre vai se adaptar a viewport independente do seu conteúdo. 
     */
 }
 
@@ -21,18 +31,19 @@ header {
 }
 
 header > h1 {
-    padding-top: 50px;
+    padding-top: 20px;
     font-variant: small-caps;
+    font-size: 13vw;
 }
 
 header > p {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
+    font-size: 3vw;
 }
 
 header a,  footer a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
 }
 
 header a:hover, footer a:hover {
@@ -40,15 +51,18 @@ header a:hover, footer a:hover {
     color: yellow;
 }
 
-a::after {
+header a::after {
     content: '\1f517\00A0';
 }
 
 section {
-    padding-top: 10vh; /* vh = viewport height */
-    padding-bottom: 10vh; 
-    line-height: 2em;
+    padding-top: 9vh; /* vh = viewport height */
+    padding-bottom: 9vh; 
+    line-height: 1.8em; /* Distancia entre linhas do texto */
     padding-left: 30px;
+    font-family: var(--fonte1);
+    font-size: 3vw;
+
     /* 
         O padding de cada uma das section tem 10% da altura da viewport, portanto, os paddings 
         das section variam na mesma proporção da variação da viewport.
@@ -57,7 +71,8 @@ section {
 
 section.imagem > p { /* Os parágrafos das section de classe imagem....*/
     background-color: rgba(0, 0, 0, 0.263);
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
 }
 
 section.normal {
@@ -65,17 +80,17 @@ section.normal {
     color: black;
 }
 
-section.imagem{
+section.imagem{ 
     background-color: rgb(48, 47, 47);
     color: white;
 }
 
-
 footer {
-    padding: 10px;
+    padding: 5px;
     background-color: black;
     color: white;
     text-align: center; 
+    font-size: 2vw;
 }
 
 
