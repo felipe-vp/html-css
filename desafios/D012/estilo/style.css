@@ -6,5 +6,77 @@
 }
 
 html, body {
-    
+    min-height: 100vh; 
+    background-color: darkgray;
+    /* 
+        A altura minima dos elementos html e body é igual a 100% a altura da viewport, 
+        portanto, o background-color vai se adaptar a viewport independente do seu conteúdo. 
+    */
 }
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a,  footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header a:hover, footer a:hover {
+    transition: 0.7s;
+    color: yellow;
+}
+
+a::after {
+    content: '\1f517\00A0';
+}
+
+section {
+    padding-top: 10vh; /* vh = viewport height */
+    padding-bottom: 10vh; 
+    line-height: 2em;
+    padding-left: 30px;
+    /* 
+        O padding de cada uma das section tem 10% da altura da viewport, portanto, os paddings 
+        das section variam na mesma proporção da variação da viewport.
+    */
+}
+
+section.imagem > p { /* Os parágrafos das section de classe imagem....*/
+    background-color: rgba(0, 0, 0, 0.263);
+    width: 400px;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(48, 47, 47);
+    color: white;
+}
+
+
+footer {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center; 
+}
+
+
+
