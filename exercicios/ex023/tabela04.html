@@ -23,10 +23,27 @@
             padding: 10px;
         }
 
+        col.cgrupos{
+            background-color: lightgreen;
+        }
+
+        col.cfilmes{
+            background-color: lightcoral;
+        }
+
     </style>
 </head>
 <body>
     <table>
+        <colgroup>
+            <col class="cgrupos">
+            <col class="cnomes">
+            <col class="cfilmes" span="3">
+            <!--
+                A principal finalidade da tag <colgroup> é agrupar uma ou mais colunas em uma tabela (<table>) para aplicar estilos (usando CSS) ou atributos a essas colunas de uma só vez. Isso evita a necessidade de adicionar classes ou estilos individualmente a cada célula (<td> ou <th>) dentro dessas colunas, tornando o código mais limpo e fácil de manter.
+                span (apenas em <colgroup>): Especifica o número de colunas consecutivas que o <colgroup> deve abranger. O valor padrão é 1. No caso da coluna filmes, há um escopo de grupo (3 colunas), é necessário span para aplicar as propriedades no grupo. 
+            -->
+        </colgroup>
         <caption>Filmes Favoritos</caption>
         <thead>
             <tr>
