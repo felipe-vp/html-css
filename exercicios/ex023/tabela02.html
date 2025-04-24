@@ -18,7 +18,16 @@
             font-size: 1.5em ;
             font-weight: bold;
             padding: 10px;
-            background-color: lightgrey;
+            background-color: lightslategray;
+        }
+
+        tbody > tr:nth-child(2n) { /* Efeito zebrado */
+            background-color: lightgray;
+
+            /* :nth-child(2n)  seleciona os elementos tr filhos diretos de tbody que pertencem a pseudo-classe :nth-child(2n), ou seja, elementos pares na série de tr. Seleciona todos os elementos que são o segundo filho, o quarto filho, o sexto filho e assim por diante, de seus respectivos pais (tbody). O 2n na expressão significa "múltiplos de dois", ou seja, os elementos pares. 
+            2n = numero par
+            2n - 1 = impar (odd)
+            */
         }
 
         td, th {
