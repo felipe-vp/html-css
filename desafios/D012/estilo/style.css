@@ -1,6 +1,16 @@
 @charset "UTF-8";
+/*
+    É uma instrução que deve ser declarada na primeira linha do arquivo,
+    é uma regra (at-rule) para definir a codificação do conjunto de
+    caracteres do documento CSS para ser compilado pelo navegador, decifrando 
+    corretamente cada caracter.
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+/*
+    É uma instrução para importar (carregar) outros arquivos CSS, nesse caso,
+    para importar um arquivo CSS de uma fonte específica.  
+*/
 
 * {
     margin: 0px;
@@ -11,6 +21,21 @@
 :root {
     --fonte1: "Jersey 10", sans-serif;
     --fonte2: Verdana, Geneva, Tahoma, sans-serif;
+    /*
+        O seletor :root{} em CSS equivale ao elemento <html>, é analogo de html{},
+        seleciona apenas o elemento raiz do documento HTML: <html>.
+        Mas em comparação direta, a pseudo-classe root tem maior prioridade, 
+        prevalece sobre as propriedades de html{}.
+        As variáveis CSS (custom properties) são propriedades personalizadas.
+        Por convenção, as variáveis  são configuradas em root devido ao seu escopo global.
+
+        Sintaxe de variáveis CSS:
+        --minhaVariavel: valor;
+
+        Sintaxe de aplicação:
+        :root { --minhaVariavel: valor; }
+        div { propriedade: var(--minhaVariavel); }
+    */
 }
 
 html, body {
@@ -19,7 +44,7 @@ html, body {
     background-color: darkgray;
     /* 
         A altura minima dos elementos html e body é igual a 100% a altura da viewport, 
-        portanto, o background-color sempre vai se adaptar a viewport independente do seu conteúdo. 
+        portanto, o background-color sempre vai se adaptar a viewport independente do tamanho do seu conteúdo. 
     */
 }
 
@@ -70,6 +95,7 @@ section {
 section > p {
     padding-bottom: 2em;
 }
+
 section.imagem > p { /* Os parágrafos das section de classe imagem....*/
     background-color: rgba(0, 0, 0, 0.263);
     display: inline-block;
