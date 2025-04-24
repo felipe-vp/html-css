@@ -14,6 +14,13 @@
             border-collapse: collapse;          
         }
 
+        caption {
+            font-size: 1.5em ;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
         td, th {
             border: 2px solid black;
             padding: 10px;
@@ -34,8 +41,10 @@
     <h1>Tabelas extensas</h1>
     <!-- 
         Hierarquia de tabelas extensas
-
+        
+        
         table
+        caption
             thead
                 th, tr, td
             tbody
@@ -45,11 +54,12 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
-            <th>
+            <th scope="col"> <!-- o escopo desse th é a coluna dele -->
                 Estado
             </th>
-            <th>
+            <th scope="col">
                 População
             </th>
         </thead>
@@ -165,7 +175,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th> <!-- o escopo desse th é a linha dele -->
                 <td class="numero"><strong>212.583.750</strong></td>
             </tr>
         </tfoot>
