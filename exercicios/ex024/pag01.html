@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px; 
+            border-collapse: collapse;   
+            position: relative;       
+        }
+
+        caption {
+            font-size: 1.5em ;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightslategray;
+        }
+
+        tbody > tr:nth-child(2n) { /* Efeito zebrado */
+            background-color: lightgray;
+            /* 
+                :nth-child(2n) seleciona os elementos tr filhos diretos de tbody que pertencem a pseudo-classe :nth-child(2n), ou seja, elementos pares na série de tr. Seleciona todos os elementos que são o segundo filho, o quarto filho, o sexto filho e assim por diante, de seus respectivos pais (tbody). O 2n na expressão significa "múltiplos de dois", ou seja, os elementos pares. 
+            
+                2n = numero par
+                2n - 1 = impar (odd)
+            */
+        }
+
+        td, th {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        td.numero {
+            text-align: right;
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+            /* 
+                O <th> do thead não está dentro de um <tr>, no codigo html, <th> é filho direto de thead, mas
+                o navegador implicitamente cria um elemento <tr> dentro do <thead> se você coloca elementos <th> diretamente dentro dele (thead). O navegador cria um <tr> automaticamente para envolver os <th> dentro do <thead>. Por isso o <tr> implicito deve ser colocado no seletor CSS thead > tr > th: que, mira essa estrutura DOM implícita, selecionando os <th> dentro do <tr> que está dentro do <thead>.
+            */
+
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <th scope="col"> <!-- o escopo desse th é a coluna dele -->
+                Estado
+            </th>
+            <th scope="col">
+                População
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45.973.194</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21.322.691</td>
+            </tr> 
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17.219.679</td>
+            </tr> 
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14.850.513</td>
+            </tr> 
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11.824.665</td>
+            </tr> 
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="numero">11.229.915</td>
+            </tr> 
+            <tr>
+                <td>Pernambuco</td>
+                <td class="numero">9.539.029</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="numero">9.233.656</td>
+            </tr> 
+            <tr>
+                <td>Pará</td>
+                <td class="numero">8.664.306</td>
+            </tr> 
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero">8.058.441</td>
+            </tr> 
+            <tr>
+                <td>Goiás</td>
+                <td class="numero">7.350.483</td>
+            </tr> 
+            <tr>
+                <td>Maranhão</td>
+                <td class="numero">7.010.960</td>
+            </tr> 
+            <tr>
+                <td>Amazonas</td>
+                <td class="numero">4.281.209</td>
+            </tr> 
+            <tr>
+                <td>Paraíba</td>
+                <td class="numero">4.145.040</td>
+            </tr> 
+            <tr>
+                <td>Espirito Santo</td>
+                <td class="numero">4.102.129</td>
+            </tr> 
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="numero">3.836.399</td>
+            </tr> 
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero">3.446.071</td>
+            </tr> 
+            <tr>
+                <td>Piauí</td>
+                <td class="numero">3.375.646</td>
+            </tr> 
+            <tr>
+                <td>Alagoas</td>
+                <td class="numero">3.220.104</td>
+            </tr> 
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="numero">2.982.818</td>
+            </tr> 
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="numero">2.901.895</td>
+            </tr> 
+            <tr>
+                <td>Sergipe</td>
+                <td class="numero">2.291.077</td>
+            </tr> 
+            <tr>
+                <td>Rondonia</td>
+                <td class="numero">1.746.227</td>
+            </tr> 
+            <tr>
+                <td>Tocantins</td>
+                <td class="numero">1.577.342</td>
+            </tr> 
+            <tr>
+                <td>Acre</td>
+                <td class="numero">880.631</td>
+            </tr> 
+            <tr>
+                <td>Amapá</td>
+                <td class="numero">802.837</td>
+            </tr> 
+            <tr>
+                <td>Roraima</td>
+                <td class="numero">716.793</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th> <!-- o escopo desse th é a linha dele -->
+                <td class="numero"><strong>212.583.750</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
