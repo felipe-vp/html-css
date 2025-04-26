@@ -1,0 +1,1 @@
+Você precisa estudar PHP para essa acessar o servidor. 

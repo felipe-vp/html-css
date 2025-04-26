@@ -12,7 +12,11 @@
 </head>
 <body>
     <h1>Meu Primeiro Formulário</h1>
-    <form action="cadastro.php" autocomplete="off"> <!-- action="cadastro.php é o destino dos dados coletados  -->
+    <form action="cadastro.php" autocomplete="off" method="post"> 
+        <!-- 
+            action="cadastro.php é o destino dos dados coletados
+            method="get" é opadrão navegador, o valor post oculta o texto enviado da barra de endereço do navegador.
+        -->
         <p><label for="inome">Nome:</label> <!-- o label cria um elo entre campo e o nome do campo -->
             <input type="text" name="nome" id="inome" ></p> 
             <!-- 
