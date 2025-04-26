@@ -7,35 +7,58 @@
 </head>
 <body>
     <form action="cadastro.php" autocomplete="on">
-        <p>
-            <label for="inome">Nome:</label> 
-            <input type="text" name="nome" id="inome" required minlength="5" maxlength="20" autocomplete="name" placeholder="Nome Completo">
-        </p>
-        <p>
-            <label for="isen">Senha:</label>
-            <input type="password" name="sen" id="isen" required minlength="6" maxlength="12" autocomplete="current-password" placeholder="Senha de acesso">
-        </p>
-        <p>
-            <label for="imedia">Média:</label>
-            <input type="number" name="media" id="imedia" required min="0" max="10" step="0.1"
-            placeholder="0 à 10" value="0"> <!-- o atributo value anula o placeholder-->
-        </p>
-        <p>
-            <label for="imes">Período Letivo</label>
-            <input type="month" name="mes" id="imes">
-        </p>
-        <p>
-            <label for="idata">Data da Prova</label>
-            <input type="date" name="data" id="idata">
-        </p>
-        <p>
-            <label for="hora">Horário da Prova</label>
-            <input type="time" name="hora" id="ihora">
-        </p>
-        <p>          
+        <fieldset>
+            <legend>Login</legend>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required minlength="5" maxlength="20" autocomplete="name" placeholder="Nome Completo">
+            </p>
+            <p>
+                <label for="isen">Senha:</label>
+                <input type="password" name="sen" id="isen" required minlength="6" maxlength="12" autocomplete="current-password" placeholder="Senha de acesso">
+            </p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Reiniciar">
-        </p>
+        </fieldset>
+        <!-- 
+            Estudar sobre RegEx, é uma funcionalidade nativa da linguagem JavaScript:
+            Dentro do contexto do desenvolvimento web, o JavaScript utiliza RegEx para realizar uma vasta gama de tarefas relacionadas à manipulação de texto, incluindo:
+
+            Validação de formulários: Verificar se o formato de um e-mail, número de telefone, CEP, etc., está correto.
+
+            Busca e substituição de texto: Encontrar e modificar padrões específicos dentro de strings de HTML, texto do usuário ou dados recebidos de um servidor.
+            
+            Extração de informações: Retirar dados específicos de strings, como URLs, números, datas, etc.
+            Análise de texto: Identificar padrões e estruturas em grandes volumes de texto.
+        -->
+        <fieldset>
+            <legend>Avaliações do Aluno</legend>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required minlength="5" maxlength="20" autocomplete="name" placeholder="Nome do Aluno">
+            </p>
+            <p>
+                <label for="imedia">Média:</label>
+                <input type="number" name="media" id="imedia" required min="0" max="10" step="0.1"
+                placeholder="0 à 10" value="0"> <!-- o atributo value anula o placeholder-->
+            </p>
+            <p>
+                <label for="imes">Período Letivo</label>
+                <input type="month" name="mes" id="imes">
+            </p>
+            <p>
+                <label for="idata">Data da Prova</label>
+                <input type="date" name="data" id="idata">
+            </p>
+            <p>
+                <label for="hora">Horário da Prova</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Reiniciar">
+            </p>
+        </fieldset>
     </form>
     
 </body>
