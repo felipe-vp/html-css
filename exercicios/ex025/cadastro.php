@@ -1,1 +1,1 @@
-Você precisa estudar PHP para essa acessar o servidor. 
+Você precisa estudar PHP para acessar essa funcionalidade. 
