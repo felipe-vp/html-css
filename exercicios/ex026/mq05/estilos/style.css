@@ -19,7 +19,7 @@ header > h1{
     text-align: center;
 }
 
-i#burguer{
+i#burguer{ /* estilos para o icone de menu burguer */
     background-color: rgb(39, 38, 38);
     display: block;
     color: white;
