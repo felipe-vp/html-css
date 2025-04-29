@@ -4,35 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalhando com links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            width: 800px;
+            background-color: lightgray;
+            padding: 20px;
+            margin: auto;
+            border-radius: 20px;
+            text-align: justify;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Usando links externos</h1> <!--link para uma página outro site-->
-    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no GitHub</a></p>
-    <!--A tag a (anchor) tem os atributos href, target e rel-->
-    <!--A frase envelopada pela tag 'a' se torna um link, abrindo a pagina externa em nova aba-->
+    <main>
+        <h1>Usando links externos</h1> <!--link para uma página outro site-->
+        <p>
+            Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no GitHub.</a>
+        </p>
+        <!--
+            A tag <a> (anchor) tem os atributos href, target e rel. A frase envelopada pela tag 'a' se torna um link, abrindo a pagina externa em nova aba (target="_blank")
+        -->
 
-    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube</a></p>
-        <!--O atributo rel tem o valor 'external', pois é uma página de site externo.-->
-        <!--O valor nofollow indica que o autor da página não endossa o site do link,-->
-        <!--indica que o link de destino não seja considerado em mecanismos de buscas (SEO).-->
+        <p>
+            Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube.</a>
+        </p>
+        <br>
+        <!--
+            O atributo rel tem o valor 'external', pois é uma página de site externo.
+            O valor nofollow indica que o autor da página não endossa o site do link, indica que o link de destino não seja considerado em mecanismos de buscas (SEO).
+        -->
 
-    <h1>Usando links internos</h1> <!--Links para outras páginas que compoe este site-->
-    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next" target="_self">segunda página</a></p> 
-    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" rel="next" target="_self">página de notícias</a></p> 
-        <!--Dentro da tag 'a', Segure Ctrl + espaço dentro das aspas em href,-->
-        <!--O VS mostra a lista de arquivos e pastas das outras páginas do site,-->
-        <!--Caso ja tenham sido criadas e salvas na pasta do site.-->
-        <!--O atributo rel tem valor next ou prev, pois o link é relacionado a-->
-        <!--página interna do site.-->
-        <!--O atributo target com valor _self abre o link na mesma aba,-->
-        <!--que é o padrão da tag quando o atributo não recebe nenhum valor.-->
+        <h1>Usando links internos</h1> <!--Links para outras páginas que compoe este site-->
+        <p>
+            Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next" target="_self">segunda página.</a>
+        </p>
+        <p>
+            Você também pode acessar a nossa <a href="noticias/pag003.html" rel="next" target="_self">página de notícias</a>
+        </p>
+        <br>
+            <!--
+                Dentro da tag 'a', Segure Ctrl + espaço dentro das aspas em href, O VS mostra a lista de arquivos e pastas das outras páginas do site, caso ja tenham sido criadas e salvas na pasta do site.
+                O atributo rel tem valor next ou prev, pois o link é relacionado a
+                página interna do site.
+                O atributo target com valor _self abre o link na mesma aba, que é o padrão da tag quando o atributo não recebe nenhum valor.
+            -->
 
-    <h1>Links para download</h1>
-    <ul>
-        <li><a href="livro/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
-        <li><a href="livro/meulivro.zip" download="meulivro.zip" type="application/zip">Livro compactado em ZIP</a></li>
-    </ul>
-    <!--Lista de valores para o atributo type-->
-    <!--iana.org/assignments/media-types/media-types.xhtml-->
+        <h1>Links para download</h1>
+        <ul>
+            <li><a href="livro/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+            <li><a href="livro/meulivro.zip" download="meulivro.zip" type="application/zip">Livro compactado em ZIP</a></li>
+        </ul>
+        <br>
+        <!--
+            Há uma lista de valores para o atributo type, dentro da tag <a> especifica o tipo de mídia do recurso vinculado. Embora os navegadores geralmente consigam inferir o tipo de arquivo com base na extensão do URL, o atributo type fornece uma dica mais explícita. 
+            Ajudar o navegador a se preparar para lidar com o recurso antes de baixá-lo ou abri-lo. Por exemplo, um navegador pode decidir usar um plugin específico para um determinado tipo de vídeo.
+            Mecanismos de busca e outros agentes de usuário: Fornecer informações mais precisas sobre o tipo de conteúdo vinculado.
+        --> 
+    </main>
 </body>
 </html>

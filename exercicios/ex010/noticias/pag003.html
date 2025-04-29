@@ -3,15 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terceira página</title>
+    <title>Pagina de notícias</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            width: 800px;
+            background-color: lightgray;
+            padding: 20px;
+            margin: auto;
+            border-radius: 20px;
+            text-align: justify;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Terceira página</h1>
-    <p>Esta é a terceira página.</p>
-    <p><a href="../index.html">Voltar para a primeira página</a></p>
-            <!--No link de referência (href), o arquivo index está fora desta pasta noticias,-->
-            <!--indicada por ../ significa a pasta anterior, que contem esta. -->
-            <!--Para acessar a página 2 (pag002.html) o link seria ../pag002.html-->
-            
+    <main>
+        <h1>Página de notícias</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde obcaecati repellendus ipsum sed id nesciunt maiores quam aperiam, magnam alias doloremque eius dolor corporis ipsam porro iure excepturi suscipit recusandae! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo asperiores repellendus earum soluta blanditiis cum distinctio id. At saepe, impedit inventore suscipit earum aspernatur quaerat maxime! Ipsum, nesciunt facilis? Atque.
+        </p>
+        <br>
+        <p>
+            <a href="../index.html">Voltar para a primeira página</a>
+        </p>
+        <!--
+            No link de referência (href), o arquivo index está fora desta pasta noticias, 
+            indicado por ../ 
+            significa a pasta anterior (acima), que contem index.
+            Para acessar a página 2 (pag002.html) o link seria "../pag002.html". 
+        -->
+    </main>
 </body>
 </html> 
