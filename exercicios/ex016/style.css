@@ -4,14 +4,14 @@
  }
 
 body{
-    background-image: linear-gradient(45deg, #E0D5AD, #92a78c); /*Fundo da página*/
+    background-image: linear-gradient(45deg, lightgreen, red); /*Fundo da página*/
 }
 
 main{
     width: 600px; /*Largura da área de texto*/
-    padding: 10px; /*Distancia de borda do texto*/
+    padding: 10px; /*Distancia entre borda e texto, preenchimento*/
     margin: auto; /*Margem, neste caso, o valor auto centraliza o quadrante de texto*/
-    background-color: white; /*Cor de fundo da área de texto*/
+    background-color: white; /*Cor de fundo da área de texto, main*/
     border-radius: 10px; /*Radio da borda, aredondamento das arestas*/
     box-shadow: 10px 10px 20px #56635285; /*Sombreamento do quadrante de texto projetado no fundo*/
     /*projeção da sobra pro lado, pra baixo, e espalhamento da sombra*/
@@ -20,7 +20,7 @@ main{
 h1{
     color: #F79E6B;
     text-align: center; /*Distribuição do texto, centralizado*/
-    text-shadow: 2px 2px #f38b4ea5; /*Sobreamento das letras*/
+    text-shadow: 2px 2px #f38b4ea5; /*Sobreamento das letras de h1*/
 }
 
 h2{
@@ -29,6 +29,6 @@ h2{
 }
 
 p{
-    text-align: justify; /*Distribuição uniforme das palavras*/
+    text-align: justify; /*Distribuição uniforme das palavras no parágrafo*/
     text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.53);
 }
