@@ -4,33 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outras Formatações</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            width: 800px;
+            background-color: lightgray;
+            padding: 20px;
+            margin: auto;
+            border-radius: 20px;
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
-    <h1>Outras Formatações</h1>
-    <h2>Código-Fonte</h2>
-    <!--Envelopamento: Ctrl + Shift + P-->
-    <!--Digite emmet: wrap with abbreviation, enter-->
-    <!--Digite a tag-->
-    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem javascript</p> 
-    <pre> <!--Para mostrar o código da tag <code> com identação-->
-        <code> <!--Fonte mono-espaçada, ideal para mostrar códigos-->
-    num = int(input('Digite um número')) <!--Para controlar a tabulação:-->
-    if num % 2 == 0;                     <!--Segura Shift e tab-->
-        print(f'O número {num} é PAR')   <!--para mover o texto selecinado para a esquerda-->
-    else:                                <!--ou apenas tab para mover para a direita-->
-        print(f'O número {num é IMPAR'})
-    print('Fim do programa')
-        </code>
-    </pre>
-    <h2>Citações Simples</h2>
-    <p>Já dizia o velho sábio: <q>A curiosidade é o motor de uma vida que se afasta do marasmo</q></p> <!--tag <q> para quotes (citações)-->
-    <h2>Citações completas</h2>
-    <p>Chuck Noland, no filme O Náufrago:</p>
-    <blockquote cite="https://hqscomcafe.com.br/2021/11/04/frases-do-filme-naufrago/">Nós dois chegamos a essa conclusão. Kelly considerou todos os fatores. Ela tinha que me esquecer. Considerei tudo e vi que a tinha perdido. Eu nunca ia sair daquela ilha. Eu ia morrer ali, totalmente sozinho. Adoeceria ou me machucaria ou qualquer coisa. A única escolha que eu tinha, a única coisa que podia controlar, era quando, como e onde isso iria acontecer. Então, fiz uma corda. E subi no penhasco para me enforcar, mas tinha que testar. Claro, você me conhece. E o peso do tronco quebrou o galho da árvore. Eu não podia nem me matar do jeito que eu queria. Não tinha poder sobre nada. Foi aí que me vi envolvido por uma sensação reconfortante. Eu sabia de alguma forma que tinha de ficar vivo. De alguma forma. Tinha que continuar respirando, mesmo sem motivos de esperança. Minha lógica dizia que nunca mais veria este lugar de novo. E foi o que eu fiz. Fiquei vivo. Continuei respirando. E, um dia, essa lógica mostrou estar errada, porque a maré veio e me trouxe a vela. E agora, aqui estou. Estou de volta. Em Memphis, conversando com você. Tem gelo no meu copo, eu a perdi de novo. Estou muito triste de não ter a Kelly. Mas sou grato por ela ter ficado comigo naquela ilha. E sei o que tenho que fazer agora. Tenho que continuar respirando, porque, amanhã, o sol nascerá. Quem sabe o que a maré poderá trazer?</blockquote> 
-    <!--blockquote: Para citações mais longas-->
-    <!--O atributo 'cite' dessa tag serve apenas aos mecanismos de busca, relacionado à citação-->
-    <h2>Abreviações</h2>
-    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando.</p>
-
+    <main>
+        <h1>Outras Formatações</h1>
+        <h2>Código-Fonte</h2>
+        <!-- Envelopamento: Ctrl + Shift + P -->
+        <!-- Digite emmet: wrap with abbreviation, enter -->
+        <!-- Digite a tag -->
+        <!-- &lt&gt&lt/&gt -->
+        <p>
+            O comando <code>document.getElementById('teste')</code> é escrito em linguagem javascript. <strong>&ltcode&gtCÓDIGO&lt/code&gt</strong>
+        </p>
+        
+        <pre> <!--Para mostrar o código da tag <code> com identação-->
+            <code> <!--Fonte mono-espaçada, ideal para mostrar códigos-->
+                num = int(input('Digite um número')) <!--Para controlar a tabulação:-->
+                if num % 2 == 0;                     <!--Segura Shift + tab-->
+                    print(f'O número {num} é PAR')   <!--para mover o texto selecinado para a esquerda-->
+                else:                                <!--ou apenas tab para mover para a direita-->
+                    print(f'O número {num é IMPAR'})
+                print('Fim do programa')
+            </code>
+        </pre>
+        <p><strong>&ltpre&gt&lt/pre&gt</strong>   Coloca identação no código quando encapsula a tag do código <strong>&ltcode&gtCÓDIGO&lt/code&gt</strong>.</p><br>
+        <h2>Citações Simples</h2>
+        <!--tag <q> para quotes (citações)-->
+        <p>Já dizia o velho sábio: <q>A curiosidade é o motor de uma vida que se afasta do marasmo.</q></p>
+        <p><strong>&ltq&gt</strong>FRASE<strong>&lt/q&gt</strong>   é uma tag semântica para citações e frases curtas, insere automaticamente as aspas duplas.</p><br>
+        
+        <h2>Citações Completas</h2>
+        <!--blockquote: Para citações mais longas-->
+        <p>Chuck Noland, no filme O Náufrago:</p>
+        <!--O atributo 'cite' dessa tag serve apenas aos mecanismos de busca, relacionado à citação-->
+        <p><strong>&ltblockquote&gt</strong>CITAÇÃO<strong>&lt/blockquote&gt</strong>   tag para citações longas e trechos longos de texto.</p>
+        <blockquote cite="https://hqscomcafe.com.br/2021/11/04/frases-do-filme-naufrago/">Nós dois chegamos a essa conclusão. Kelly considerou todos os fatores. Ela tinha que me esquecer. Considerei tudo e vi que a tinha perdido. Eu nunca ia sair daquela ilha. Eu ia morrer ali, totalmente sozinho. Adoeceria ou me machucaria ou qualquer coisa. A única escolha que eu tinha, a única coisa que podia controlar, era quando, como e onde isso iria acontecer. Então, fiz uma corda. E subi no penhasco para me enforcar, mas tinha que testar. Claro, você me conhece. E o peso do tronco quebrou o galho da árvore. Eu não podia nem me matar do jeito que eu queria. Não tinha poder sobre nada. Foi aí que me vi envolvido por uma sensação reconfortante. Eu sabia de alguma forma que tinha de ficar vivo. De alguma forma. Tinha que continuar respirando, mesmo sem motivos de esperança. Minha lógica dizia que nunca mais veria este lugar de novo. E foi o que eu fiz. Fiquei vivo. Continuei respirando. E, um dia, essa lógica mostrou estar errada, porque a maré veio e me trouxe a vela. E agora, aqui estou. Estou de volta. Em Memphis, conversando com você. Tem gelo no meu copo, eu a perdi de novo. Estou muito triste de não ter a Kelly. Mas sou grato por ela ter ficado comigo naquela ilha. E sei o que tenho que fazer agora. Tenho que continuar respirando, porque, amanhã, o sol nascerá. Quem sabe o que a maré poderá trazer?</blockquote><br>
+        
+        <h2>Abreviações</h2>
+        <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando.</p>
+        <p><strong>&ltabbr</strong> title="HyperText Markup Language" <strong>&gt</strong> HTML <strong>&lt/abbr&gt</strong></p><br>
+    </main>
 </body>
 </html>

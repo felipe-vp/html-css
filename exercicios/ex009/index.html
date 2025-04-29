@@ -4,79 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            width: 800px;
+            background-color: lightgray;
+            padding: 20px;
+            margin: auto;
+            border-radius: 20px;
+            text-align: justify;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Trabalhando com Listas</h1>
-    <h2>Listas Ordenadas</h2> <!--Ordered List-->
-    <ol type="i"> <!-- parâmetro type: 1(ordem numérica), A(ordem alfabética) a(Ordem alf. minusc.) I(Ordem algarismos romanos) i(algarismos romanos minusc.) -->
-        <li>Acordar</li>
-        <li>Ligar para o João</li>
-        <li>Tomar café</li>
-        <li>Escovar os dentes</li>
-        <li>Ir para a faculdade</li>
-        <li>Almoçar</li>
-        <li>Ir para o trabalho</li>
-        <li>Voltar para casa</li>
-        <li>Jantar</li>
-        <li>Dormir</li>
-    </ol>
-    <h2>Listas não Ordenadas</h2><!--Unordered List-->
-    <ul type="square"> <!-- parâmetro type: disc, circle e square -->
-        <li>Pão</li>
-        <li>Leite</li>
-        <li>Tomate</li>
-        <li>Alface</li>
-        <li>Manteiga</li>
-        <li>Arroz</li>
-        <li>Feijão</li>
-    </ul>
-    <h2>Minhas linguagens favoritas</h2>
-    <ol>
-        <li>Antigas</li>
-        <ol type="a">
-            <li>Clipper</li>
-            <li>Visual Basic</li>
-            <li>Fortran</li>
-            <li>Delphi</li>
+    <!-- &lt&gt&lt/&gt -->
+    <main>
+        <h1>Trabalhando com Listas</h1>
+
+        <h2>Listas Ordenadas</h2> <!--Ordered List-->
+        <!--
+            parâmetro type: 1(ordem numérica), A(ordem alfabética) a(Ordem alf. minusc.) I(Ordem algarismos romanos) i(algarismos romanos minusc.)
+         -->
+        <pre>
+            <code>
+                &ltol type="value"&gt
+                    &ltli&gtitem1&lt/li&gt
+                    &ltli&gtitem2&lt/li&gt
+                &lt/ol&gt
+            </code>
+        </pre>
+
+        <ol type="i">
+            <li>Acordar</li>
+            <li>Ligar para o João</li>
+            <li>Tomar café</li>
+            <li>Escovar os dentes</li>
+            <li>Ir para a faculdade</li>
+            <li>Almoçar</li>
+            <li>Ir para o trabalho</li>
+            <li>Voltar para casa</li>
+            <li>Jantar</li>
+            <li>Dormir</li>
         </ol>
-        <li>Novas</li>
-        <ol type="a" start="5"> <!--Segura alt e clicando em multiplas tags...-->
-            <li>PHP</li>        <!--para alterar-las simultaneamente todas selecionadas..-->
-            <li>Python</li>     
-            <li>JavaScript</li>
-            <li>Kotlin</li>
+        <br>
+
+        <p>Tipos de parâmetros (type="<strong>value</strong>")</p> 
+        <ul type="circle">
+            <li><strong>1</strong>: Ordem numérica</li>
+            <li><strong>A</strong>: Ordem alfabética maiúscula</li>
+            <li><strong>a</strong>: Ordem alfabética minúscula</li>
+            <li><strong>I</strong>: Algarismos romanos maiúsculos</li>
+            <li><strong>i</strong>: Algarismos romanos minúsculos</li>
+        </ul>
+        <br>
+
+        <h2>Listas não Ordenadas</h2><!--Unordered List-->
+        <p>ul = Unordered List. Tipos de parâmetros: disc, circle e square.</p>
+        <pre>
+            <code>
+                &ltul type="square"&gt
+                    &ltli&gtitem1&lt/li&gt
+                    &ltli&gtitem2&lt/li&gt
+                &lt/ul&gt
+            </code>
+        </pre>
+    
+        <ul type="square"> <!-- parâmetro type: disc, circle e square -->
+            <li>Pão</li>
+            <li>Leite</li>
+            <li>Tomate</li>
+            <li>Alface</li>
+            <li>Manteiga</li>
+            <li>Arroz</li>
+            <li>Feijão</li>
+        </ul>
+        <br>
+
+        <h2>Minhas linguagens favoritas</h2>
+        <p>Listas dentro de listas.</p>
+
+        <ol>
+            <li>Antigas</li>
+            <ol type="a">
+                <li>Clipper</li>
+                <li>Visual Basic</li>
+                <li>Fortran</li>
+                <li>Delphi</li>
+            </ol>
+            <li>Novas</li>
+            <ol type="a" start="5"> <!--Segura alt e clicando em multiplas tags...-->
+                <li>PHP</li>        <!--para alterar-las simultaneamente todas selecionadas..-->
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Kotlin</li>
+            </ol>
         </ol>
-    </ol>
-    <h2>Meus jogos favoritos</h2> <!--listas dentro de listas, independentes do tipo-->
-    <ol>
-        <li>NES</li>
-        <ul type="square">
-            <li>Mario Bros</li>
-            <ul type="circle">
-                <li>Mario Bros 3</li>
-                <li>Mario: Lost Levels</li>
+
+        <pre>
+            <code>
+                &ltol&gt
+                    &ltli&gtAntigas&lt/li&gt
+                    &ltol type="a"&gt
+                        &lt&gtClipper&lt/&gt
+                        &lt&gtVisual Basic&lt/&gt
+                        &lt&gtFortran&lt/&gt
+                        &lt&gtDelphi&lt/&gt
+                    &lt/ol&gt
+                    &ltli&gtNovas&lt/li&gt
+                    &ltol type="a" start="5"&gt
+                        &lt&gtPHP&lt/&gt
+                        &lt&gtPython&lt/&gt
+                        &lt&gtJavaScript&lt/&gt
+                        &lt&gtKotlin&lt/&gt
+                    &lt/&gt
+                &lt/ol&gt
+            </code>
+        </pre>
+        <p>Lista ordenada do tipo 'a' (type="a") ordem alfabética minúscula, a segunda parte da lista começa no quinto elemento, letra 'e' (start="5").</p>
+
+        <br>
+        <h2>Meus jogos favoritos</h2> <!--listas dentro de listas, independentes do tipo-->
+        <p>Listas dentro de listas de multiplos tipos.</p>
+        <ol>
+            <li>NES</li>
+            <ul type="square">
+                <li>Mario Bros</li>
+                <ul type="circle">
+                    <li>Mario Bros 3</li>
+                    <li>Mario: Lost Levels</li>
+                </ul>
+                <li>Ninja Gaiden</li>
             </ul>
-            <li>Ninja Gaiden</li>
+            <li>SNES</li>
+            <ul type="square">
+                <li>Mario</li>
+                <li>Donkey Kong</li>
+            </ul>
+            <li>PlayStation</li>
+            <ul type="square">
+                <li>Final Fantasy</li>
+                <li>Castlevania</li>
+            </ul>
+        </ol>
+        <br>
+
+        <h2>Lista de Definições</h2> <!--dl = Definition List-->
+        <ul type="circle">
+            <li><strong>dl</strong> = Definition List</li>
+            <li><strong>dt</strong> = Definition Term</li>
+            <li><strong>dd</strong> = Definition Description</li>
         </ul>
-        <li>SNES</li>
-        <ul type="square">
-            <li>Mario</li>
-            <li>Donkey Kong</li>
-        </ul>
-        <li>PlayStation</li>
-        <ul type="square">
-            <li>Final Fantasy</li>
-            <li>Castlevania</li>
-        </ul>
-    </ol>
-    <h2>Lista de Definições</h2> <!--dl = Definition List-->
-    <dl>
-        <dt>HTML</dt> <!--dt = Definition Term-->
-        <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd> <!--dd = Definition Description-->
-        <dt>CSS</dt>
-        <dd>Linguagem de marcação para a criação do design de um site.</dd>
-        <dt>JavaScript</dt>
-        <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
-    </dl>
+
+        <pre>
+            <code>
+                &ltdl&gt
+                    &ltdtHTML&gt&lt/dt&gt
+                    &ltdd&gtLinguagem de marcação para a criação do conteúdo de um site.&lt/dd&gt
+                &lt/dl&gt
+            </code>
+        </pre>
+
+        <dl>
+            <dt>HTML</dt> <!--dt = Definition Term-->
+            <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd> <!--dd = Definition Description-->
+            <dt>CSS</dt>
+            <dd>Linguagem de marcação para a criação do design de um site.</dd>
+            <dt>JavaScript</dt>
+            <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+        </dl>
+    </main>
 </body>
 </html>
