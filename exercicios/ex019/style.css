@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*
-    IDENTIFICADOR (id) E SELETOR (#)
+    IDENTIFICADOR (id em HTML) E SELETOR (# em CSS)
 
     No código HTML:
     A id é um atributo identificador único para uma única tag,
@@ -11,7 +11,7 @@
 
     <tag id="label"></tag>
 
-    A sintaxe do atributo
+    A sintaxe de atributos
     <tag atributo1="valor" atributo2="valor">Texto</tag>
     
     Cada adição de atributo na tag é separada por um espaço
@@ -21,8 +21,12 @@
     atributo cujo valor é seu nome (label = etiqueta de identificação)
     #label {propriedade} 
     
-    A sintaxe da declaração das propriedades 
-    #label{propriedades1; propriedade2;}
+    A sintaxe da declaração de propriedades:
+
+    #label{
+    propriedades1: valor; 
+    propriedade2: valor;
+    }
 
     Cada declaração é separada por ;
 */
@@ -41,17 +45,15 @@
     .label2{propriedade3; propriedade4;}
 
     É possivel adicionar a tag mais de uma class, ou
-    class com id, se forem redundantes, o class sobrepõe a id.
+    class com id, e se forem redundantes, o class sobrepõe a id.
 */
 
-body
-{
+body{
     background-color: rgb(199, 199, 199);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#principal  
-{
+h1#principal{
     /*
         Não é necessário enunciar o tipo da tag antes do seletor (h1#principal)
         pois essas propriedades podem ser aplicadas a outras tags.
@@ -62,29 +64,24 @@ body
 }
 
 
-h1
-{
+h1{
     color:darkgreen;
     background-color:lightgrey;
 }
 
-h2
-{
+h2{
     color:darkslateblue;
 }
 
-.basico
-{
+.basico{
     color: lightgreen;
 }
 
-.intermediario
-{
+.intermediario{
     color: lightyellow;
 }
 
-.avancado
-{
+.avancado{
     color: rgb(211, 55, 55);
 }
 
