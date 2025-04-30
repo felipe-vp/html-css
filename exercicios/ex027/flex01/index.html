@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container{
+            background-color: yellow;
+            display: flex; /* flex - torna o container uma flexbox */
+            flex-direction: row; /* row é a direção padrão do container*/
+
+            /* 
+                Valores para a propriedade flex-direction:
+
+                row (linha) é definido pelos eixo principal(main-axis) e eixo transversal(cross-axis). 
+                main-axis: esquerda>>>direita
+                cross-axis: topo>>>base            
+
+                row-reverse, linha na direção reversa, com os eixos invertidos, na direção contrária de row. 
+                main-axis: esquerda<<<direita
+                cross-axis: topo<<<base  
+
+                column(coluna)
+                main-axis: topo>>>base
+                cross-axis: esquerda>>>direita
+                
+                column-reverse, coluna na direção reversa, apenas o main-axis invertido.
+                main-axis: topo<<<base
+                cross-axis: esquerda>>>direita  
+            */
+        }
+
+        div.item{
+            background-color: red;
+            border: 2px solid black;
+            color: white;
+            text-align: center;
+            flex: auto; /* auto - torna os itens fluidos dentro do container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body> 
+</html>
