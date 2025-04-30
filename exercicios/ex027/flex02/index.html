@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container{
+            background-color: yellow;
+            display: flex; /* flex - torna o container uma flexbox, uma caixa flexível */
+            flex-direction: row; /* row é a direção padrão do container*/
+            flex-wrap: wrap; /* nowrap é o valor padrão do navegador, o encapsulamento não "quebra" */
+
+            /* 
+                nowrap impede o container de "quebrar" quando a sua largura não comporta a largura dos itens, 
+                ou seja, os itens não são rearranjados internamente. O container tem flexibilidade somente no eixo principal (main-axis). 
+                
+                wrap permite a "quebra" do container, de modo que o navegador rearranja os itens no sentido do eixo transversal (cross-axis), ou seja, os itens reposicionados são acondicionados na linha (row) imediatamente abaixo. O último item da linha é reposicionado abaixo em nova linha, e assim sucessivamente. 
+
+                wrap-reverse permite a "quebra" do container mas no sentido contrario do eixo transversal,cross-axis. Os itens reposicionados são acondicionados na linha (row) imediatamente ACIMA. O último item da linha sobre o eixo principal é reposicionado acima em nova linha, e assim sucessivamente. 
+
+                A mesma lógica se estende para as outras configurações de flex-direction. 
+            */
+        }
+
+        div.item{
+            background-color: red;
+            border: 2px solid black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+        <div class="item">Exemplo de bloco F</div>
+        <div class="item">Exemplo de bloco G</div>
+    </div>
+</body> 
+</html>
