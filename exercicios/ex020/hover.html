@@ -7,7 +7,7 @@
     <style>
         /*
             A pseudo-classe atribui ao seletor (tag) as propriedades declaradas
-            somente enquando o estado desse elemento está em determinada condição.
+            somente enquando o estado desse elemento está em determinada condição relacionada a classe.
 
             Sintaxe:
             selector:pseudo-class {property: value;}
@@ -16,14 +16,24 @@
         body
         {
             font-family: Arial, Helvetica, sans-serif;
-            /*Todos os elementos contidos em body recebem a propriedade declarada*/
+            /* Todos os elementos contidos em body recebem a propriedade declarada*/
+        }
+
+        div{
+            font-weight: bold;
+            color: darkorange;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
+            background-color: lightgray;
+            width: 300px;
         }
 
         div:hover 
         {
             color: red;
-            /*o elemento div se torna a pseudo-classe hover recebendo a propriedade
-            declarada, fica vermelho quando mouse paira por cima*/
+            /*
+                o elemento div se torna a pseudo-classe hover recebendo a propriedade
+                declarada, fica vermelho quando mouse paira por cima
+            */
         }
         
         div > p 
@@ -31,21 +41,22 @@
             display: none;
             /*
                 Os elementos que são filhos diretos recebem as propriedades declaradas.
-                div > p é um seletor que seleciona somente os elementos p contidos em div
-                para receber o atributo display. O elemento p (parágrafo) contido no 
+                div > p é um seletor que seleciona somente os elementos <p> contidos em <div>
+                para receber propriedade display:none. O elemento p (parágrafo) contido no 
                 elemento div fica oculto.
             */
         }
 
         div:hover > p
-        {
+        {   
             display: block;
             color: white;
             background-color: red;
             width: 300px;
+            
             /*
-                O seletor div:hover > p aplica as propriedades declaradas ao elemento p
-                quando o elemento div atingir a condição da pseudo-classe hover, ou seja
+                O seletor div:hover > p aplica as propriedades declaradas ao elemento <p>
+                quando o elemento <div> atingir a condição inerente a pseudo-classe hover, ou seja
                 quando div for "hoverada". 
             */
         }
@@ -56,7 +67,7 @@
     <p>Passe o mouse no texto abaixo</p>
     <div>
         Passe o mouse aqui
-        <p>TANAM! ACHOUUU!</p> <!--p é filho direto de div-->
+        <p>TANAM! ACHOUUU!</p> <!-- <p> é filho direto de <div> -->
     </div>
     <p>Fim do exemplo.</p>
 </body>

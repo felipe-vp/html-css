@@ -8,13 +8,13 @@
 <style>
      /*
             A pseudo-classe em CSS atribui ao seletor (tag) as propriedades declaradas
-            somente enquando o estado desse elemento está em determinada condição.
+            somente enquando o estado desse elemento está em determinada condição, inerente a pseudo-class.
 
             Sintaxe:
             selector:pseudo-class {property: value;}
     */
 
-    div /* Seletor de tag div que recebem as propriedades.*/
+    div /* Seletor das tags <div> que recebem as propriedades.*/
     {
         background-color: lightgray;
         text-align: center;
@@ -27,14 +27,10 @@
     div:hover
     {
         background-color: yellow;
-
         /*
             Os elementos div recebem as propriedades declaradas no primeiro seletor 
-            e, recebem a propriedade background-color, ficam amarelos ENQUANTO o 
-            mouse "pairar" (hover) sobre cada elemento div. 
-        */
+            e recebem a propriedade background-color: yellow, ficam amarelos, ENQUANTO o mouse "pairar" (hover) sobre cada elemento <div>. */
     }
-
 </style>
 <body>
     <div id="d1">01</div>
