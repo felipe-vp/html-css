@@ -8,12 +8,10 @@
         body{
             background-image: url(imagens/wallpaper001.jpg);
         }
+
         div.quadrado{ 
             /* 
-                Seletor das div da classe quadrado;
-                A classe é útil para estilizar multiplos elementos,
-                já a id é um identificador exclusivo, único em todo
-                o documento, portanto, identificando um único elemento.
+                Seletor das div da classe quadrado; A classe é útil para estilizar multiplos elementos, já a id é um identificador exclusivo, único em todo o documento, portanto, identificando um único elemento.
             */
             display: inline-block;
             border: 2px solid black;
@@ -23,29 +21,29 @@
             height: 300px;
         }
 
-        div#q1{ /* Seletor da div com o identificador q1*/
+        div#q1{ /* Seletor da div com o identificador id="q1" */
             background-color: skyblue;
         }
 
-        div#q2{ /* Seletor da div com o identificador q2*/
-            background-image: linear-gradient( to bottom yellow red);
+        div#q2{ /* Seletor da div com o identificador "q2" */
+            background-image: linear-gradient( to bottom, yellow, red);
         }
 
-        div#q3{ /* Seletor da div com o identificador id q3*/
+        div#q3{ /* Seletor da div com o identificador id "q3" */
             background-image: url('imagens/pattern003.png');
         }
 
     </style>
 </head>
+
 <body>
-    <div class="quadrado" id="q1">
-        
+    <div class="quadrado" id="q1">  
     </div>
+
     <div class="quadrado" id="q2">
-
     </div>
-    <div class="quadrado" id="q3">
 
+    <div class="quadrado" id="q3">
     </div>   
 </body>
 </html>

@@ -7,17 +7,17 @@
     <style>
         #container {
             background-image: url('imagens/target001.png');
-            background-size: 100% 100%;/* background-size: Largura Altura;*/
-            position: relative;
+            background-size: 100% 100%;/* background-size: Largura Altura; */
             height: 500px;
             background-color: aqua;
             padding: 10px;
+            position: relative;
         }
 
         #conteudo {
+            position: absolute; 
             background-image: url('imagens/target001.png');
             background-size: 100% 100%;
-            position: absolute; 
             height: 200px;
             background-color: yellow;   
             width: 400px;
@@ -26,19 +26,20 @@
             right: 50%; /* top-right é o vertice de referencia */  
             transform: translate(50%,-50%); /* translate(horizontal, vertical) */
             /* 
-                top: 50px; Distancia topo do conteudo em relação ao topo do conteineir
-                right: 150px; Distancia lateral direita do conteudo e lateral direita do conteiner
+                top: 50px; Distancia topo do conteudo em relação ao topo do conteineir;
+                right: 150px; Distancia entre a lateral direita do conteudo e a lateral direita do conteiner;
 
                 top: 50%;
                 right: 50%;
 
-                As medidas em percentual significa que a borda do topo está posicionado
-                a uma distancia igual a 50% da altura do container e a borda direita está 
-                a uma distancia de 50% da largura do container. Logo, o que está centralizado 
-                é o vertice top-right. 
+                As medidas em percentual significa que a borda do topo do conteúdo está posicionado a uma distancia igual a 50% da altura do container; 
+                E a borda direita do conteúdo está a uma distancia de 50% da largura do container. Logo, o que está centralizado é o vertice top-right. 
 
                 Valores positivos na horizontal movem o conteudo para direita, negativos para esquerda,
                 e valores positivos na vertical movem o conteudo para baixo, negativos para cima.
+
+                transform: translate(50%,-50%) posiciona o conteudo 50% da sua largura para a direita, e posiciona o conteúdo 50% da sua altura pra cima. 
+
              */
         }
     </style>
@@ -47,7 +48,6 @@
 <body>
     <section id="container">
         <article id="conteudo">
-        
         </article>       
     </section>
 </body>
