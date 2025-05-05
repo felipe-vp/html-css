@@ -10,9 +10,11 @@
             display: flex; /* flex - torna o container uma flexbox */
             flex-flow: row nowrap; /* flex-flow é uma shorthand para flexbox*/
             justify-content: flex-start; /* flex-start é o valor padrão */
-
+            height: 200px;
+            align-items: stretch; /* stretch é o valor padrão */
+            
             /* 
-                Valores para justify-content
+                justify-content, controla a distribuição dos items no eixo principal, valores:
 
                 flex-start, padrão do navegador, o primeiro itens do container alinhado a partir do main-start;
 
@@ -25,6 +27,9 @@
                 space-evenly, os item ficam distribuidos com espaçamento uniforme antes e depois de cada item, logo, espaços iguais entre eles inclusive antes do primeiro item e depois do último;
 
                 space-around, o espaço do container é dividido em seções iguais, e cada item fica centralizado dentro de cada seção.
+            */
+            /* 
+                Align-items, controla a distribuição no eixo transversal, cujos valores são mesmo de justify-content.
             */
         }
 
